@@ -30,8 +30,8 @@ A fully autonomous Discord bot for stock analysis powered by Groq LLaMA 3.3 70B,
 ### 2. Clone & Install
 
 ```bash
-git clone <repo>
-cd martin_stocks
+git clone https://github.com/thinandyavin-tech/martin-stocks.git
+cd martin-stocks
 pip install -r requirements.txt
 ```
 
