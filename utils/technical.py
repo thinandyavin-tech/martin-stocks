@@ -29,6 +29,8 @@ def calculate_rsi(series: pd.Series, period: int = 14) -> float:
     avg_loss = loss.rolling(window=period).mean()
     rs = avg_gain / avg_loss.replace(0, np.nan)
     rsi = 100 - (100 / (1 + rs))
+    # No losses in the window means RSI is 100 (or 50 when price didn't move at all), not undefined
+    rsi = rsi.mask(avg_loss.eq(0) & avg_gain.gt(0), 100.0).mask(avg_loss.eq(0) & avg_gain.eq(0), 50.0)
     val = rsi.iloc[-1]
     return round(float(val), 1) if not np.isnan(val) else 50.0
 
