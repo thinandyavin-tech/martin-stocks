@@ -1,5 +1,8 @@
 # Martin's Stocks — Discord AI Stock Analysis Bot
 
+[![tests](https://github.com/thinandyavin-tech/martin-stocks/actions/workflows/tests.yml/badge.svg)](https://github.com/thinandyavin-tech/martin-stocks/actions/workflows/tests.yml)
+
+
 A fully autonomous Discord bot for stock analysis powered by Groq LLaMA 3.3 70B, yfinance, and real-time market data.
 
 ## Features
